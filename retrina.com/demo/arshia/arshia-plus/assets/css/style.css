@@ -555,9 +555,10 @@ header .navbar-brand b {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right:2rem;
-  height: 300px;
-  width: 300px;
+  right:-.3rem;
+  top: 55%;
+  height: 550px;
+  width: 450px;
 }
 /*------------------------- About -------------------------*/
 .about-img{
