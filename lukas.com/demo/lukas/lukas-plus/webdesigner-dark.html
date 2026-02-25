@@ -1453,6 +1453,29 @@ As a General Web Virtual Assistant, I support businesses across their entire dig
     <!--  Luke Js  -->
     <script src="assets/js/luke.js"></script>
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"398d0e35186742219fc4b15efc701f63","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+    emailjs.init("96_UPP64ognZ8mIif");
+})();
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_2ter3tn", "template_52y6bwx", this)
+    .then(function() {
+        alert("Message sent successfully! I’ll get back to you soon.");
+        document.getElementById("contactForm").reset();
+    }, function(error) {
+        alert("Failed to send message.");
+        console.log(error);
+    });
+});
+</script>
+
+
 </body>
 
 </html>
